@@ -17,3 +17,8 @@ Database builder takes three inputs:
   The schema file can be found in your build output. See the screenshot below if you are not sure where this file exists.
 * an output file.
   The output will be a sqlite file. Where you want to store it is set here.
+
+
+Sample xcode setup:
+
+![ScreenShot](https://raw.github.com/loofy2/SqliteDatabaseBuilder/master/setup.png)
