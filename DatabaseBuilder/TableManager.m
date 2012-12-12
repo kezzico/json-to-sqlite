@@ -3,7 +3,7 @@
 //  DatabaseBuilder
 //
 //  Created by Lee Irvine on 8/7/12.
-//  Copyright (c) 2012 fareportal. All rights reserved.
+//  Copyright (c) 2012 kezzi.co. All rights reserved.
 //
 
 #import "TableManager.h"

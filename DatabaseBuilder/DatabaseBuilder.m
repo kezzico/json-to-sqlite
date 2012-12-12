@@ -3,7 +3,7 @@
 //  DatabaseBuilder
 //
 //  Created by Lee Irvine on 8/7/12.
-//  Copyright (c) 2012 fareportal. All rights reserved.
+//  Copyright (c) 2012 kezzi.co. All rights reserved.
 //
 
 #import "DatabaseBuilder.h"
@@ -25,13 +25,19 @@
 }
 
 - (void) buildDatabase {
+  NSLog(@"Building database...");
+
   TableManager *tableManager = [[[TableManager alloc] initWithTableFolder: self.tableFolder] autorelease];
   PersistentStoreManager *storeManager = [[[PersistentStoreManager alloc] init] autorelease];
   [storeManager savePersistentStoreTo:self.outputFile forModel: self.modelFile];
   self.context = [storeManager buildContext];
   
+  NSLog(@"Reading model from: %@", self.modelFile);
+  NSLog(@"Saving store to: %@", self.outputFile);
+  
   for(NSString *table in tableManager.tables) {
     NSArray *data = [tableManager dataForTable:table];
+    NSLog(@"Populating %@", table);
     [self fillTable:table withData:data];
   }
   
