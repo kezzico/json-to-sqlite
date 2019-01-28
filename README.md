@@ -7,7 +7,9 @@ Limitations:
 Relationships between tables is currently not supported. 
 
 Usage:
+```
 dbbuilder __config_dir__ __schema_file__ __output__
+```
 
 * config_dir
   A directory containing a dbconfig.plist and json files.
